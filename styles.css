@@ -7,7 +7,7 @@
 
 /* Match CompDex's gentle lift for projects that have a destination. */
 .linked-project{transition:transform 500ms cubic-bezier(.22,1,.36,1),box-shadow 500ms ease}
-.linked-project:focus-within{transform:translateY(-12px);box-shadow:0 6px 14px #00cbb533}
+.linked-project:has(a:focus-visible){transform:translateY(-12px);box-shadow:0 6px 14px #00cbb533}
 @media(hover:hover){.linked-project:hover{transform:translateY(-12px);box-shadow:0 6px 14px #00cbb533}}
 /* Account for the section's own top padding when scrolling from the nav. */
 #projects{scroll-margin-top:-60px}
@@ -59,3 +59,4 @@ nav a,.button,.skill,.tags li,.email{font-weight:600}
 .social a:first-child{flex:0 0 auto;margin:0}
 .social.is-compact .social-icon .social-label{display:none}
 .social.is-compact .social-icon{width:44px;min-width:44px;padding-inline:0;gap:0}
+
