@@ -33,5 +33,24 @@ themeToggle.addEventListener('click', () => {
   }
 });
 window.addEventListener('storage', event => {
-  if (event.key === 'edwin-portfolio-theme' || event.key === null) applyTheme(event.newValue);
+  if (event.key === 'edwin-portfolio-theme' || event.key === null) {
+    const theme = event.newValue === 'light' || event.newValue === 'dark'
+      ? event.newValue
+      : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    applyTheme(theme);
+  }
 });
+
+
+const socialRow = document.querySelector('.social');
+function fitSocialButtons() {
+  socialRow.classList.remove('is-compact');
+  const buttons = [...socialRow.querySelectorAll('.button')];
+  const gap = parseFloat(getComputedStyle(socialRow).columnGap) || 0;
+  const fullWidth = buttons.reduce((sum, button) => sum + button.getBoundingClientRect().width, 0)
+    + gap * (buttons.length - 1);
+  socialRow.classList.toggle('is-compact', fullWidth > socialRow.clientWidth);
+}
+new ResizeObserver(fitSocialButtons).observe(socialRow);
+if (document.fonts) document.fonts.ready.then(fitSocialButtons);
+fitSocialButtons();

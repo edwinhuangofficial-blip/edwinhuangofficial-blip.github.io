@@ -1,10 +1,11 @@
-// Apply a saved choice before styles load; new browsers start in dark mode.
+// Apply the saved preference, or the system theme on a first visit, before styles load.
 (() => {
-  let theme = 'dark';
+  let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   try {
-    if (localStorage.getItem('edwin-portfolio-theme') === 'light') theme = 'light';
+    const saved = localStorage.getItem('edwin-portfolio-theme');
+    if (saved === 'light' || saved === 'dark') theme = saved;
   } catch {
-    // The switch still works when browser storage is unavailable.
+    // Use the system theme when browser storage is unavailable.
   }
   document.documentElement.dataset.theme = theme;
 })();
