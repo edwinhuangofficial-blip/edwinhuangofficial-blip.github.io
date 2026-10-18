@@ -1,20 +1,162 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Edwin Huang, ECE student at NYU. Explore my software and hardware projects."><meta name="theme-color" content="#030712"><title>Edwin Huang | ECE @ NYU</title><link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=plain-eh"><link rel="stylesheet" href="styles.css?v=lift-12"><script src="script.js" defer></script></head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<nav aria-label="Main navigation"><a href="#home" aria-current="location">Home</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
-<main id="main">
-<section id="home" class="hero"><div class="portrait" aria-label="Edwin Huang initials"><span>EH</span></div><h1>Hi, I'm <strong>Edwin.</strong> I'm a <strong>ECE</strong> student at NYU. I have a passion for <strong>programming</strong> and building products.</h1><div class="social"><a class="button" href="assets/Edwin-Huang-Resume.pdf" download="Edwin-Huang-Resume.pdf"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:24px;height:24px;flex-shrink:0"><path d="M14 2H5v20h14V7zM14 2v5h5"/><rect x="1" y="11" width="22" height="10" rx="2" fill="#dc2626" stroke="none"/><text x="12" y="18.3" text-anchor="middle" fill="#fff" stroke="none" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="7.5">PDF</text></svg>Download Resume</a><a class="button" href="https://linkedin.com/in/edwin-huang-c6r5" target="_blank" rel="noopener noreferrer"><img src="assets/linkedin.svg" alt="">LinkedIn</a><a class="button" href="https://github.com/edwinhuangofficial-blip" target="_blank" rel="noopener noreferrer"><img src="assets/github.svg" alt="">GitHub</a></div></section>
-<section id="skills" class="section"><h2>Skills</h2><h3 class="skill-heading">Software</h3><div class="skills"><div class="skill"><img src="assets/python.svg" alt=""><span>Python</span></div><div class="skill"><img src="assets/javascript.svg" alt=""><span>JavaScript</span></div><div class="skill"><img src="assets/html5.svg" alt=""><span>HTML</span></div><div class="skill"><img src="assets/css3.svg" alt=""><span>CSS</span></div></div><h3 class="skill-heading">Hardware</h3><div class="skills"><div class="skill"><img src="assets/fusion.svg" alt=""><span>Fusion 360</span></div><div class="skill"><img src="assets/arduino.svg" alt=""><span>Arduino</span></div><div class="skill"><svg viewBox="0 0 56 56" aria-hidden="true"><path d="M10 46V10h36v36M7 47h42M18 10v9h20v-9M28 19v7m-3-3 3 3 3-3M20 36l8-5 8 5v9H20z"/></svg><span>3D Printing</span></div><div class="skill"><svg viewBox="0 0 56 56" aria-hidden="true"><path d="M10 12h36M20 12v10h16V12M24 22l4 7 4-7M28 29v10M10 45h36M18 34l5 5m15-5-5 5M28 43v3"/></svg><span>Laser Cutting</span></div></div></section>
-<section id="projects" class="section"><h2>Projects</h2><div class="projects"><article class="linked-project"><h3><a href="https://edwinhuangofficial-blip.github.io/compdex/" target="_blank" rel="noopener noreferrer">CompDex: Competitive Pokédex</a></h3><a class="cover dex" href="https://edwinhuangofficial-blip.github.io/compdex/" target="_blank" rel="noopener noreferrer" aria-label="Open CompDex"><img class="project-screenshot" src="assets/compdex-preview.png" alt="CompDex interface showing Pokémon cards, search, and competitive filters" width="1890" height="900" loading="lazy"></a><p>I built an interactive Pokédex that displays Pokémon stats, types, abilities, and sprites using PokéAPI. Game-availability filters, competitive eligibility, and stat-based sorting help players make team-building decisions. I also used Python to maintain a competitive usage-rate database.</p><ul class="tags" aria-label="CompDex technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python</li><li>PokéAPI</li></ul></article><article><h3>HydroPlatform: Water-Intake Alarm Clock</h3><div class="cover hydro" role="img" aria-label="HydroPlatform illustrated project cover"><span class="drop" aria-hidden="true"></span><span class="cover-title">Hydro<span>Platform</span></span><span>A smarter start to your morning</span></div><p>I designed and built a water-intake alarm clock with a three-person team, integrating an Arduino UNO, HX711 load cell, peristaltic pump, buzzer, and LCD. I modeled the enclosure and components in Fusion 360, tested laser-cut and 3D-printed parts, and helped integrate the final prototype.</p><ul class="tags" aria-label="HydroPlatform technologies"><li>Fusion 360</li><li>Arduino UNO</li><li>3D Printing</li><li>Laser Cutting</li></ul></article></div></section>
-<section id="contact" class="section contact"><h2>Contact Me</h2><p>Feel free to reach out for collaborations, opportunities, or just to say hello! I'll get back to you as soon as possible.</p><a class="email" href="mailto:edwinhuangofficial@gmail.com">edwinhuangofficial@gmail.com <span aria-hidden="true">↗</span></a></section>
-</main></body></html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Edwin Huang, ECE student at NYU. Explore my software and hardware projects.">
+    <meta name="theme-color" content="#030712">
+    <title>Edwin Huang | ECE @ NYU</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=plain-eh">
+    <script src="theme-init.js"></script>
+    <link rel="stylesheet" href="styles.css?v=theme-toggle">
+    <script src="script.js?v=theme-toggle" defer>
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">
+      Skip to content
+    </a>
 
+    <nav aria-label="Main navigation">
+      <a href="#home" aria-current="location">
+        Home
+      </a>
+      <a href="#skills">
+        Skills
+      </a>
+      <a href="#projects">
+        Projects
+      </a>
+      <a href="#contact">
+        Contact
+      </a>
+      <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-label="Dark mode" aria-checked="true">
+        <span class="theme-track" aria-hidden="true">
+          <span class="theme-thumb"><span class="theme-sun">🌤️</span><span class="theme-moon">☾<span class="theme-stars">✦</span></span></span>
+        </span>
+      </button>
+    </nav>
 
+    <main id="main">
 
+      <section id="home" class="hero">
+        <div class="portrait" aria-label="Edwin Huang initials">
+          <span>EH</span>
+        </div>
+        <h1>Hi, I'm <strong>Edwin.</strong> I'm a <strong>ECE</strong> student at NYU. I have a passion for <strong>programming</strong> and building products.</h1>
+        <div class="social">
+          <a class="button" href="assets/Edwin-Huang-Resume.pdf" download="Edwin-Huang-Resume.pdf">
+            <svg viewBox="0 0 24 24" aria-hidden="true" style="width:24px;height:24px;flex-shrink:0">
+              <path d="M14 2H5v20h14V7zM14 2v5h5"/>
+              <rect x="1" y="11" width="22" height="10" rx="2" fill="#dc2626" stroke="none"/>
+              <text x="12" y="18.3" text-anchor="middle" fill="#fff" stroke="none" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="7.5">PDF</text>
+            </svg>
+            Download Resume
+          </a>
+          <a class="button" href="https://linkedin.com/in/edwin-huang-c6r5" target="_blank" rel="noopener noreferrer">
+            <img src="assets/linkedin.svg" alt="">
+            LinkedIn
+          </a>
+          <a class="button" href="https://github.com/edwinhuangofficial-blip" target="_blank" rel="noopener noreferrer">
+            <img src="assets/github.svg" alt="">
+            GitHub
+          </a>
+        </div>
+      </section>
 
+      <section id="skills" class="section">
+        <h2>Skills</h2>
+        <h3 class="skill-heading">Software</h3>
+        <div class="skills">
+          <div class="skill">
+            <img src="assets/python.svg" alt="">
+            <span>Python</span>
+          </div>
+          <div class="skill">
+            <img src="assets/javascript.svg" alt="">
+            <span>JavaScript</span>
+          </div>
+          <div class="skill">
+            <img src="assets/html5.svg" alt="">
+            <span>HTML</span>
+          </div>
+          <div class="skill">
+            <img src="assets/css3.svg" alt="">
+            <span>CSS</span>
+          </div>
+        </div>
+        <h3 class="skill-heading">Hardware</h3>
+        <div class="skills">
+          <div class="skill">
+            <img src="assets/fusion.svg" alt="">
+            <span>Fusion 360</span>
+          </div>
+          <div class="skill">
+            <img src="assets/arduino.svg" alt="">
+            <span>Arduino</span>
+          </div>
+          <div class="skill">
+            <svg viewBox="0 0 56 56" aria-hidden="true">
+              <path d="M10 46V10h36v36M7 47h42M18 10v9h20v-9M28 19v7m-3-3 3 3 3-3M20 36l8-5 8 5v9H20z"/>
+            </svg>
+            <span>3D Printing</span>
+          </div>
+          <div class="skill">
+            <svg viewBox="0 0 56 56" aria-hidden="true">
+              <path d="M10 12h36M20 12v10h16V12M24 22l4 7 4-7M28 29v10M10 45h36M18 34l5 5m15-5-5 5M28 43v3"/>
+            </svg>
+            <span>Laser Cutting</span>
+          </div>
+        </div>
+      </section>
 
+      <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="projects">
 
+          <article class="linked-project">
+            <h3><a href="https://edwinhuangofficial-blip.github.io/compdex/" target="_blank" rel="noopener noreferrer">CompDex: Competitive Pokédex</a></h3>
+            <a class="cover dex" href="https://edwinhuangofficial-blip.github.io/compdex/" target="_blank" rel="noopener noreferrer" aria-label="Open CompDex">
+              <img class="project-screenshot" src="assets/compdex-preview.png" alt="CompDex interface showing Pokémon cards, search, and competitive filters" width="1890" height="900" loading="lazy">
+            </a>
+            <p>I built an interactive Pokédex that displays Pokémon stats, types, abilities, and sprites using PokéAPI. Game-availability filters, competitive eligibility, and stat-based sorting help players make team-building decisions. I also used Python to maintain a competitive usage-rate database.</p>
+            <ul class="tags" aria-label="CompDex technologies">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Python</li>
+              <li>PokéAPI</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>HydroPlatform: Water-Intake Alarm Clock</h3>
+            <div class="cover hydro" role="img" aria-label="HydroPlatform illustrated project cover">
+              <span class="drop" aria-hidden="true"></span>
+              <span class="cover-title">Hydro<span>Platform</span></span>
+              <span>A smarter start to your morning</span>
+            </div>
+            <p>I designed and built a water-intake alarm clock with a three-person team, integrating an Arduino UNO, HX711 load cell, peristaltic pump, buzzer, and LCD. I modeled the enclosure and components in Fusion 360, tested laser-cut and 3D-printed parts, and helped integrate the final prototype.</p>
+            <ul class="tags" aria-label="HydroPlatform technologies">
+              <li>Fusion 360</li>
+              <li>Arduino UNO</li>
+              <li>3D Printing</li>
+              <li>Laser Cutting</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out for collaborations, opportunities, or just to say hello! I'll get back to you as soon as possible.</p>
+        <a class="email" href="mailto:edwinhuangofficial@gmail.com">
+          edwinhuangofficial@gmail.com
+          <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+    </main>
+  </body>
+</html>
 
 

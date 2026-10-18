@@ -14,3 +14,24 @@ function updateNavigation() {
 addEventListener('scroll', () => { if (!scheduled) { scheduled = true; requestAnimationFrame(updateNavigation); } }, { passive: true });
 addEventListener('resize', updateNavigation);
 updateNavigation();
+
+const themeToggle = document.getElementById('theme-toggle');
+function applyTheme(theme) {
+  const selected = theme === 'light' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = selected;
+  themeToggle.setAttribute('aria-checked', String(selected === 'dark'));
+  document.querySelector('meta[name="theme-color"]').content = selected === 'dark' ? '#030712' : '#f7f9fc';
+}
+applyTheme(document.documentElement.dataset.theme);
+themeToggle.addEventListener('click', () => {
+  const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  applyTheme(next);
+  try {
+    localStorage.setItem('edwin-portfolio-theme', next);
+  } catch {
+    // Storage restrictions should not prevent changing the current theme.
+  }
+});
+window.addEventListener('storage', event => {
+  if (event.key === 'edwin-portfolio-theme' || event.key === null) applyTheme(event.newValue);
+});

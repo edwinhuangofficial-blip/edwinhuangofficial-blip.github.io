@@ -12,7 +12,9 @@
 /* Account for the section's own top padding when scrolling from the nav. */
 #projects{scroll-margin-top:-60px}
 @media(max-width:800px){#projects{scroll-margin-top:-45px}}
-
+.cover.dex .project-screenshot {
+  transform: scale(1.4);
+}
 
 /* Keep the next section below the opening viewport at every screen size. */
 .hero{min-height:max(760px,100svh)}
@@ -23,3 +25,23 @@
 .projects h3 a{transition:color 200ms ease}.projects h3 a:hover,.projects h3 a:focus-visible{color:#04b3d5;text-decoration:none}
 
 
+
+/* Sun/moon theme switch. The transparent button gives the compact track a larger hit area. */
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;flex:0 0 60px;width:60px;height:44px;padding:0;border:0;background:transparent;cursor:pointer;border-radius:999px}
+.theme-toggle:focus-visible{outline:3px solid #71efe1;outline-offset:2px}
+.theme-track{position:relative;display:block;width:52px;height:23px;border:1px solid #46505c;border-radius:999px;background:#30363b}
+.theme-thumb{position:absolute;top:-5px;left:-1px;display:grid;place-items:center;width:31px;height:31px;border:1px solid #46505c;border-radius:50%;background:#232a31;box-shadow:0 1px 3px #0002;transform:translateX(23px);transition:transform 250ms ease,background-color 250ms ease}
+.theme-sun{display:none;font-size:20px;line-height:1}.theme-moon{position:relative;color:#c0e8ff;font:700 28px/1 Georgia,serif;transform:rotate(-22deg)}.theme-stars{position:absolute;top:1px;right:-3px;font:10px/1 Arial,sans-serif;color:#9ed5f5}
+:root[data-theme="light"]{color-scheme:light;--bg:#f7f9fc;--text:#172338;--muted:#58677c;--teal:#087f93;--card:#fff}
+[data-theme="light"] .hero:before{background:radial-gradient(ellipse at 28% 25%,#d8c9ffb3,transparent 58%),radial-gradient(ellipse at 65% 20%,#b7edf08c,transparent 55%)}
+[data-theme="light"] nav{background:#fffffff0;box-shadow:0 4px 24px #2438580d;border:1px solid #e0e5ee}
+[data-theme="light"] nav a{color:#526077}[data-theme="light"] nav a:hover,[data-theme="light"] nav a[aria-current]{background:#e9eef7;color:#18283f}
+[data-theme="light"] .portrait span{background:linear-gradient(135deg,#e7e5fa,#d5f0f1);color:#20334c}
+[data-theme="light"] .skill-heading{color:#34445b}[data-theme="light"] .skill{color:#34445b;border-color:#e0e6ef;box-shadow:0 4px 15px #24385806}
+[data-theme="light"] .skill svg{stroke:#087f93}[data-theme="light"] .projects article{border:1px solid #e0e6ef;box-shadow:0 8px 28px #24385809}
+[data-theme="light"] .tags li{background:#edf2f8;color:#435570}[data-theme="light"] .button{background:linear-gradient(105deg,#087f93,#0789b5 52%,#6054db)}
+[data-theme="light"] a:focus-visible,[data-theme="light"] .theme-toggle:focus-visible{outline-color:#087f93}
+[data-theme="light"] .projects h3 a:hover,[data-theme="light"] .projects h3 a:focus-visible{color:#0789b5}
+[data-theme="light"] .theme-track{background:#f2f2f2;border-color:#d1d1d1}[data-theme="light"] .theme-thumb{transform:translateX(0);background:#fff;border-color:#e4e4e4}[data-theme="light"] .theme-sun{display:block}[data-theme="light"] .theme-moon{display:none}
+@media(max-width:440px){nav a{padding-inline:9px}.theme-toggle{flex-basis:56px;width:56px}}
+@media(prefers-reduced-motion:reduce){.theme-thumb{transition:none}}
