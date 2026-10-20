@@ -61,3 +61,7 @@ nav a,.button,.skill,.tags li,.email{font-weight:600}
 .social.is-compact .social-icon{width:44px;min-width:44px;padding-inline:0;gap:0}
 
 
+
+/* Match the centered head-and-shoulders crop of the LinkedIn portrait. */
+.portrait span{display:block;position:relative;overflow:hidden}
+.portrait img{position:absolute;display:block;width:149%;max-width:none;height:auto;left:-18.5%;top:-11%}
