@@ -65,3 +65,11 @@ nav a,.button,.skill,.tags li,.email{font-weight:600}
 /* Match the centered head-and-shoulders crop of the LinkedIn portrait. */
 .portrait span{display:block;position:relative;overflow:hidden}
 .portrait img{position:absolute;display:block;width:149%;max-width:none;height:auto;left:-18.5%;top:-11%}
+
+.cover.pokechef{position:relative;padding:0;background:#fff}.cover.pokechef .project-screenshot{position:absolute;inset:0;object-fit:cover;object-position:center;transform:none}
+
+
+/* Four skill tiles per row; two columns on narrow screens. */
+.skills{display:grid;grid-template-columns:repeat(4,126px);justify-content:center;gap:28px}
+@media(max-width:800px){.skills{grid-template-columns:repeat(4,115px);gap:14px}}
+@media(max-width:560px){.skills{grid-template-columns:repeat(2,minmax(0,126px));gap:16px}.skills .skill{width:100%}}

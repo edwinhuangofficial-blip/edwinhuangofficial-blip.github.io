@@ -5,3 +5,4 @@ Fusion mark: Autodesk, via https://commons.wikimedia.org/wiki/File:Autodesk_Fusi
 Resume: supplied by Edwin Huang.
 Project covers and process icons: original CSS/SVG illustrations for this portfolio, not project photographs.
 CompDex screenshot: supplied by Edwin Huang.
+PokéChef screenshot: supplied by Edwin Huang. Git, Node.js, FastAPI logos: Devicon v2.17.0.
